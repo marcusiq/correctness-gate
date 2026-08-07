@@ -1,0 +1,20 @@
+# private specs never ship
+project-*.md
+
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# downloaded model files (fetched by scripts/fetch_model.py)
+models/
+
+# audit leftovers and local experiments
+scratch/
+lmeval_out/
+lmeval_out_mine/
+results/tmp/
+*.excalidraw
+gen_build*.py
+
+*Zone.Identifier

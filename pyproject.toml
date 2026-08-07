@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "correctness-gate"
+version = "0.1.0"
+description = "A statistically validated regression gate for LLM quality in CI"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "PyYAML>=6",
+    "llama-cpp-python>=0.3.34",
+]
+
+[project.optional-dependencies]
+hf = ["torch>=2.4", "transformers>=4.56"]
+data = ["datasets>=2.19"]
+dev = ["pytest>=8", "scipy>=1.11"]
+
+[project.scripts]
+cgate = "correctness_gate.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["correctness_gate*"]

@@ -1,0 +1,10 @@
+# The statistical contract of the gate. Every number here is a decision,
+# not a default; the README's methodology section explains each one.
+gate:
+  alpha: 0.05        # false-positive rate the gate accepts
+  power: 0.80        # probability of catching a real drop of size mde
+  mde: 0.05          # minimum detectable effect the gate is sized for
+  hard_floor: 0.15   # a drop this large fails immediately, no statistics needed
+  n_boot: 10000      # bootstrap resamples for the confidence interval
+  seed: 1234
+  metric: acc_norm   # which per-item correctness feeds the paired test
