@@ -23,7 +23,6 @@ def _strict(cls, raw: dict, where: str):
         raise ValueError(f"{where}: unknown keys {sorted(unknown)}")
     return cls(**raw)
 
-
 @dataclass(frozen=True)
 class ModelSpec:
     name: str
@@ -50,15 +49,14 @@ class GateConfig:
 
 def load_models(path: str | Path) -> tuple[dict[str, ModelSpec], str | None]:
     raw = yaml.safe_load(Path(path).read_text())
-    specs = {
-        name: _strict(ModelSpec, {"name": name, **body}, f"{path}:{name}")
-        for name, body in raw["models"].items()
-    }
+    specs = {}
+    for name, body in raw["models"].items():
+        spec = _strict(ModelSpec, {"name":name, **body}, f"{path}:{name}")
+        specs[name] = spec
     under_test = raw.get("under_test")
     if under_test is not None and under_test not in specs:
         raise ValueError(f"under_test {under_test!r} is not a defined model")
     return specs, under_test
-
 
 def load_gate(path: str | Path) -> GateConfig:
     raw = yaml.safe_load(Path(path).read_text()) or {}
