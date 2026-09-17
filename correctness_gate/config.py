@@ -10,7 +10,7 @@ that matters is a misspelled key silently ignored, so unknown keys raise.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, fields
+from dataclasses import dataclass, field, fields
 from pathlib import Path
 
 import yaml
@@ -34,6 +34,10 @@ class ModelSpec:
     n_ctx: int = 640        # llamacpp only; the logits buffer is n_ctx x vocab floats
     n_threads: int = 4      # llamacpp only; stay at or below physical cores
     n_batch: int = 512      # llamacpp prefill chunk size; the invariance check varies this
+    n_gpu_layers: int | None = None   # llamacpp only. None = derive from device
+                                      # (-1 all layers on cuda, 0 on cpu). Set an
+                                      # explicit count for partial offload when
+                                      # two models must share the 12 GB card.
 
 
 @dataclass(frozen=True)
@@ -44,7 +48,7 @@ class GateConfig:
     hard_floor: float = 0.15
     n_boot: int = 10_000
     seed: int = 1234
-    metric: str = "acc_norm"
+    metrics: list[str] = field(default_factory=lambda: ["acc", "acc_norm"])
 
 
 def load_models(path: str | Path) -> tuple[dict[str, ModelSpec], str | None]:

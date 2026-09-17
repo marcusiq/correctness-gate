@@ -14,23 +14,33 @@ class Scored:
     rows: np.ndarray # len(toen_ids), vocab float 32 lgits
 
 class LlamaCppBackend:
-    def __init__(self, spec:ModelSpec):
-        if spec.device == "cpu":
-            #seperate the cpu specific runs
-            os.environ["CUDA_VISIBLE_DEVICES"] = ""
-        from llama_cpp import Llama
+    def __init__(self, spec: ModelSpec):
+        from llama_cpp import Llama, llama_cpp
 
         self.spec = spec
+        want = spec.n_gpu_layers
+        if want is None:
+            want = 0 if spec.device == "cpu" else -1
+
+        if want != 0 and not llama_cpp.llama_supports_gpu_offload():
+            raise RuntimeError(
+                f"{spec.name}: device={spec.device} requests GPU offload but this "
+                "llama-cpp-python build has no GPU support. Reinstall the CUDA wheel; "
+                "a CPU build would silently produce CPU numbers labeled cuda.")
+
         self.llm = Llama(
             model_path=str(Path(spec.path).expanduser()),
             n_ctx=spec.n_ctx,
             n_batch=spec.n_batch,
             n_threads=spec.n_threads,
-            n_gpu_layers=0 if spec.device == "cpu" else -1,
-            logits_all=True,  # scores becomes (n_ctx, vocab) float32, ~389 MB at 640 ctx
+            n_gpu_layers=want,
+            logits_all=True,
             seed=1234,
             verbose=False,
         )
+        # What was requested, for the run record. Ground truth still comes from
+        # the VRAM check below, not from this number.
+        self.n_gpu_layers = want
 
     def score(self, context: str, continuation: str) -> Scored:
         whole = self.llm.tokenize((context+continuation).encode("utf-8"))

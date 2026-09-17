@@ -43,6 +43,7 @@ def main() -> int:
     be = make_backend(specs[a.model])
 
     agree = acc_mine = acc_ref = 0
+    agree_norm = accn_mine = accn_ref = 0
     max_delta = 0.0
     for k, r in enumerate(rows, 1):
         args = r["arguments"]
@@ -58,12 +59,28 @@ def main() -> int:
         acc_mine += pm == gold
         acc_ref += pt == gold
         max_delta = max(max_delta, max(abs(m - t) for m, t in zip(mine, theirs)))
+
+        # acc_norm: the gate's decision metric, so it needs validating too. The
+        # length rule here must stay identical to mcq.score_item: UTF-8 bytes of
+        # the continuation, leading space included. `conts` are lm-eval's own
+        # continuation strings, which already carry that space.
+        lens = [len(c.encode("utf-8")) for c in conts]
+        pmn = int(np.argmax([m / L for m, L in zip(mine, lens)]))
+        accn_mine += pmn == gold
+        accn_ref += int(r["acc_norm"])          # lm-eval's per-item verdict
+        agree_norm += (pmn == gold) == bool(r["acc_norm"])
         print(f"\r{k}/{len(rows)}", end="", flush=True)
 
     n = len(rows)
     print(f"\npick agreement: {agree}/{n}")
     print(f"acc  mine {acc_mine / n:.2f}   lm-eval {acc_ref / n:.2f}")
     print(f"max |ll_mine - ll_lmeval| = {max_delta:.4f}")
+    print(f"\nacc_norm item agreement: {agree_norm}/{n}")
+    print(f"acc_norm  mine {accn_mine / n:.2f}   lm-eval {accn_ref / n:.2f}")
+    if agree_norm != n:
+        print("MISMATCH: the normalized metric disagrees with lm-eval on "
+              f"{n - agree_norm} item(s). The gate decides on acc_norm, so fix "
+              "this before trusting any verdict.")
     return 0
 
 

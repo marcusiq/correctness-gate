@@ -1,0 +1,31 @@
+# The gate's own eval: five cases with verdicts known from quant-lab's
+# published perplexity results (report.md in that repo). expect values:
+#   PASS / FAIL  asserted
+#   REPORT       run, record, do not assert (the deliberately open case)
+items: data/arc_easy_200.json
+cases:
+  - name: noise-must-pass-q8
+    baseline: qwen3b-q4km
+    candidate: qwen3b-q8
+    expect: PASS
+    note: perplexity delta ~0.0 in quant-lab; a gate that fails this has a false-positive problem
+  - name: noise-must-pass-f16
+    baseline: qwen3b-q4km
+    candidate: qwen3b-f16
+    expect: PASS
+    note: full-precision reference vs the 4-bit cluster
+  - name: catastrophic-must-fail
+    baseline: qwen3b-q4km
+    candidate: qwen3b-q2k
+    expect: FAIL
+    note: uncalibrated Q2_K, perplexity 23190, generates gibberish
+  - name: improvement-must-pass
+    baseline: qwen3b-q2k
+    candidate: qwen3b-q2k-imatrix
+    expect: PASS
+    note: the calibration recovery; should pass, ideally flagged as significant improvement
+  - name: subtle-open-question
+    baseline: qwen3b-q4km
+    candidate: qwen3b-q2k-imatrix
+    expect: REPORT
+    note: perplexity 8.67 vs 10.48; whether 200 MCQ items can see this gap is the experiment

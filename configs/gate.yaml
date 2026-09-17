@@ -7,4 +7,7 @@ gate:
   hard_floor: 0.15   # a drop this large fails immediately, no statistics needed
   n_boot: 10000      # bootstrap resamples for the confidence interval
   seed: 1234
-  metric: acc_norm   # which per-item correctness feeds the paired test
+  # Every metric here must pass. A regression on either one fails the gate,
+  # so alpha is split across them (Bonferroni) to keep the family-wise
+  # false-positive rate at the value above. See docs/methodology.
+  metrics: [acc, acc_norm]
