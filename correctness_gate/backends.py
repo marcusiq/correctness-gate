@@ -11,7 +11,7 @@ from .config import ModelSpec
 @dataclass
 class Scored:
     token_ids: list[int] # continuation token ids, in order
-    rows: np.darray # len(toen_ids), vocab float 32 lgits
+    rows: np.ndarray # len(toen_ids), vocab float 32 lgits
 
 class LlamaCppBackend:
     def __init__(self, spec:ModelSpec):
