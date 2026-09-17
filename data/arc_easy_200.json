@@ -1,0 +1,2202 @@
+[
+ {
+  "qid": "Mercury_7026513",
+  "question": "A rock formation in a land area contains fossils. Over time, tremendous heat and pressure change the formation to produce a harder rock formation without fossils. Which change in rock type has occurred in this land area?",
+  "choices": [
+   "Igneous rock has turned into sedimentary rock.",
+   "Igneous rock has turned into metamorphic rock.",
+   "Sedimentary rock has turned into igneous rock.",
+   "Sedimentary rock has turned into metamorphic rock."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_192343",
+  "question": "Many flowers attract bees. Bees consume nectar from the flower for energy. How does this interaction benefit the plant?",
+  "choices": [
+   "by increasing photosynthesis",
+   "by pollinating it",
+   "by limiting growth",
+   "by reducing competition"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "NYSEDREGENTS_2010_4_16",
+  "question": "Which behavior will best help a student stay healthy?",
+  "choices": [
+   "watching television five hours a day",
+   "sleeping three hours each night",
+   "eating fruits and vegetables each day",
+   "exercising once a month"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7159880",
+  "question": "If a pond is polluted by soap that has phosphate, this pollutant will cause the algae to quickly reproduce. Which will most likely increase in the pond if this happens to the algae?",
+  "choices": [
+   "sulfur",
+   "oxygen",
+   "nitrogen",
+   "carbon dioxide"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "ACTAAP_2012_7_2",
+  "question": "Iron oxide, also known as rust, is formed when iron chemically combines with oxygen. Which term best describes iron oxide?",
+  "choices": [
+   "element",
+   "mixture",
+   "solution",
+   "compound"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "AIMS_2008_4_18",
+  "question": "Which of the following contains salt water?",
+  "choices": [
+   "oceans",
+   "raindrops",
+   "groundwater",
+   "polar icecaps"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "MCAS_2012_8_23643",
+  "question": "Ann makes hats for people. She has each person select the fabric and a hat style before she makes the hat to fit the person's head size. Which type of manufacturing system is Ann most likely using to make hats?",
+  "choices": [
+   "mass production",
+   "custom production",
+   "automated production",
+   "assembly line production"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "TIMSS_2007_4_pg70",
+  "question": "In which example does an object move because of the force of gravity?",
+  "choices": [
+   "a girl hitting a ball with a bat",
+   "a boy pushing a box across the floor",
+   "a girl hammering a nail into a wall",
+   "a boy falling from a tree onto the ground"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "MDSA_2007_8_4",
+  "question": "Use The Periodic Table of the Elements and the information below to answer the question. Magnesium metal (Mg) is grayish-white in color and reacts actively with water. Fluorine (F2) is a greenish-yellow gas at room temperature and is a member of the halogen family. These two elements react to produce magnesium fluoride (MgF2), a chemical commonly used in making windows and lenses. According to the Periodic Table of the Elements, which element is most similar to magnesium (Mg)?",
+  "choices": [
+   "calcium (Ca)",
+   "iodine (I)",
+   "sodium (Na)",
+   "sulfur (S)"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "MDSA_2011_8_2",
+  "question": "One solar day on Jupiter lasts only 9 hours and 50 minutes. What causes a solar day?",
+  "choices": [
+   "diameter of the planet",
+   "rotational speed of the planet",
+   "speed of a planet in orbit around the sun",
+   "diameter of the orbit of a planet around the sun"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "TIMSS_2007_8_pg63",
+  "question": "In living organisms, the level of organization from least complex to most complex is",
+  "choices": [
+   "cell, tissue, organ, organism",
+   "cell, organ, tissue, organism",
+   "tissue, cell, organ, organism",
+   "tissue, organ, cell, organism"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "AKDE&ED_2008_8_38",
+  "question": "Which tool, when properly used, would best help a student classify a basket of apples into groups based on mass?",
+  "choices": [
+   "balance",
+   "thermometer",
+   "meter stick",
+   "graduated cylinder"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_400173",
+  "question": "One advantage of a hand lens over a microscope is that the hand lens",
+  "choices": [
+   "is easier to carry on field investigations.",
+   "is less likely to be infected by bacteria.",
+   "makes very tiny objects appear larger.",
+   "produces a more accurate image."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_410895",
+  "question": "Darryl learns that freezing temperatures may help cause weathering. Which statement explains how freezing temperatures most likely cause weathering?",
+  "choices": [
+   "by freezing the leaves on trees",
+   "by causing rocks to stick together",
+   "by turning acid rain into acid snow",
+   "by freezing water in the cracks of rocks"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "NYSEDREGENTS_2010_8_6",
+  "question": "A student fails to eat a balanced diet over a period of time. This lack of a balanced diet can lead to",
+  "choices": [
+   "selective breeding",
+   "dynamic equilibrium",
+   "extinction",
+   "disease"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "NYSEDREGENTS_2008_4_23",
+  "question": "One role of a producer in a food chain is to provide",
+  "choices": [
+   "water for plants",
+   "sunlight for plants",
+   "nutrients for animals",
+   "shelter for animals"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_401307",
+  "question": "Finding fossils of warm-weather plants in the rock layers of a cold northern island suggests that",
+  "choices": [
+   "the plants used to be harvested for food.",
+   "the island used to be located farther south.",
+   "the climate of the island used to be warmer.",
+   "the fossils used to be more resistant to cold."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_402052",
+  "question": "Which reflects light?",
+  "choices": [
+   "mirror",
+   "camera",
+   "telescope",
+   "eyeglasses"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "MCAS_2012_8_23644",
+  "question": "Which of the following are formed when two crustal plates collide with one another?",
+  "choices": [
+   "hot spots",
+   "rift valleys",
+   "mountain ranges",
+   "mid-ocean ridges"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_408556",
+  "question": "Evan is performing an investigation. Before conducting his investigation, what must Evan do?",
+  "choices": [
+   "record his observations",
+   "develop a hypothesis",
+   "reach a conclusion",
+   "organize the data"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_407690",
+  "question": "Penny's class was learning how rapidly some changes can happen on Earth. Which event causes the fastest change to the surface of Earth?",
+  "choices": [
+   "water flowing in a riverbed",
+   "a wave crashing on a beach",
+   "an earthquake cracking a road",
+   "wind blowing against a mountain"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "VASoL_2008_5_34",
+  "question": "Students notice that in the fall leaves of sugar maple trees turn red, but the leaves of black oak trees turn brown. The students are making",
+  "choices": [
+   "an observation",
+   "a conclusion",
+   "a prediction",
+   "an inference"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7001435",
+  "question": "Which of these is an example of a chemical reaction?",
+  "choices": [
+   "storing milk by putting it into the freezer",
+   "milk turning sour when left in a warm place",
+   "mixing milk into a glass with chocolate powder",
+   "allowing milk to evaporate, leaving behind powdered milk"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7217333",
+  "question": "The scientific method is the inquiry process by which scientists raise and attempt to answer new questions. Which is the best way to communicate findings that result from scientific inquiry?",
+  "choices": [
+   "discuss the findings with scientists who agree with you",
+   "discuss the findings with a well-known scientist",
+   "publish the findings in scientific journals",
+   "publish the findings in local newspapers"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7128240",
+  "question": "Mangrove trees are affected by several factors. Which is an abiotic factor contributing to the energy cycle of a mangrove ecosystem?",
+  "choices": [
+   "bacteria",
+   "climate",
+   "fungi",
+   "rocks"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_400065",
+  "question": "What keeps the planets in orbit around the Sun?",
+  "choices": [
+   "air resistance",
+   "friction",
+   "gravity",
+   "magnetism"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "NYSEDREGENTS_2008_8_4",
+  "question": "Which system produces most of the hormones in the human body?",
+  "choices": [
+   "circulatory",
+   "digestive",
+   "endocrine",
+   "respiratory"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "NYSEDREGENTS_2010_8_41",
+  "question": "Which energy source is considered nonrenewable?",
+  "choices": [
+   "moving water",
+   "fossil fuel",
+   "wind",
+   "biomass"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_416124",
+  "question": "Which two human body systems are most responsible for getting oxygen to cells?",
+  "choices": [
+   "digestive and skeletal",
+   "skeletal and circulatory",
+   "circulatory and respiratory",
+   "respiratory and digestive"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_406672",
+  "question": "Which is a function of a seed?",
+  "choices": [
+   "forming fruit",
+   "making pollen",
+   "storing food for a new plant",
+   "taking in water from the ground"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7228305",
+  "question": "The cells of organisms found in the phylum Porifera (sponges) are not organized into tissues. What structures are absent in organisms belonging to the phylum Porifera?",
+  "choices": [
+   "organelles",
+   "cells",
+   "genes",
+   "organs"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_SC_401642",
+  "question": "A marine iguana is an animal that lives on the shoreline of warm islands. Its tail is long and thick. Which of these is improved by the shape of its tail?",
+  "choices": [
+   "swimming in the ocean",
+   "blending in with rocks",
+   "absorbing nutrients",
+   "finding food inland"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "MCAS_2000_4_24",
+  "question": "Why do identical twins usually look like each other?",
+  "choices": [
+   "They were born on the same day.",
+   "They have the same kinds of interests.",
+   "They inherited the same characteristics from their parents.",
+   "They were taught the same kinds of things at home."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_400693",
+  "question": "The phases of the Moon are caused by the",
+  "choices": [
+   "tilt of the Earth.",
+   "tilt of the Moon.",
+   "revolution of the Earth around the Sun.",
+   "revolution of the Moon around the Earth."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_SC_408703",
+  "question": "Andre learned that plants survive through a process called photosynthesis. Which substance do plants produce during photosynthesis?",
+  "choices": [
+   "minerals",
+   "nitrogen",
+   "soil",
+   "sugar"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "AKDE&ED_2008_4_39",
+  "question": "A glass of ice water is placed on a table. After 10 minutes, there are drops of water on the outside surface of the glass. Which change in phase caused the drops of water?",
+  "choices": [
+   "Liquid water in the air evaporated into a gas.",
+   "Liquid water in the air condensed into a solid.",
+   "Water vapor from the air evaporated into a liquid.",
+   "Water vapor from the air condensed into a liquid."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_183925",
+  "question": "Why do trees like oaks and walnuts depend upon squirrels?",
+  "choices": [
+   "to control population size",
+   "to pollinate their flowers",
+   "to remove dead wood",
+   "to aid in seed distribution"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7056490",
+  "question": "If the Earth rotated in the opposite direction, what would most likely occur?",
+  "choices": [
+   "The Sun would rise in the west.",
+   "The seasons would be reversed.",
+   "There would be more days in each year.",
+   "The phases of the Moon would last longer."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_406917",
+  "question": "Students measured the elevation changes in a large park near their school. Which of the following would be the best way to report their findings?",
+  "choices": [
+   "line graph",
+   "topographic map",
+   "color-coded chart",
+   "spreadsheet data table"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7214043",
+  "question": "A researcher is working on a family genetics project. She wants to trace a particular trait back through several generations of her ancestors. Which type of display will best help the researcher organize the information?",
+  "choices": [
+   "flow chart",
+   "cycle diagram",
+   "pedigree chart",
+   "Punnett square"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7092400",
+  "question": "As two continental plates collide, the edges of the plates are crumpled and uplifted. Which of these landforms is most likely a result of this type of collision?",
+  "choices": [
+   "normal faults",
+   "mountain ranges",
+   "U-shaped valleys",
+   "shield volcanoes"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_415413",
+  "question": "How is weather related to climate?",
+  "choices": [
+   "Climate is the long-term average of a region's weather.",
+   "Climate describes the weather of a large area.",
+   "Weather is the long-term average of a region's climate.",
+   "Weather describes the climate of a large area."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7264163",
+  "question": "Scientists use large optical telescopes to obtain information about the planets in the solar system. What wavelengths of electromagnetic radiation provide this information?",
+  "choices": [
+   "gamma radiation",
+   "infrared radiation",
+   "radio waves",
+   "visible light"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_SC_406475",
+  "question": "Jennifer is jumping rope. Which type of characteristic is she most likely demonstrating?",
+  "choices": [
+   "learned",
+   "recessive",
+   "inherited",
+   "instinctive"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7114923",
+  "question": "Clownfish take shelter in the tentacles of sea anemones and keep sea anemones clean. Which type of relationship does this represent?",
+  "choices": [
+   "parasitism",
+   "commensalism",
+   "mutualism",
+   "neutralism"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7077665",
+  "question": "Which of these statements is true about the parts that make up the atom?",
+  "choices": [
+   "Protons are larger than neutrons.",
+   "Electrons have a positive charge.",
+   "Electrons are inside the nucleus.",
+   "Neutrons have no charge."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7136483",
+  "question": "Daphnee is going to build a model of the solar system for her science project. She decides that a meter (m) will represent one astronomical unit (AU) in her model. Based on this scale, how far away from the Sun would she need to place Earth?",
+  "choices": [
+   "one meter",
+   "two meters",
+   "three meters",
+   "four meters"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7212625",
+  "question": "What is the smallest particle of an element that still exhibits all the properties of that element?",
+  "choices": [
+   "an electron",
+   "an atom",
+   "a molecule",
+   "a proton"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_LBS10390",
+  "question": "A cold-blooded vertebrate with smooth skin belongs to what class of animals?",
+  "choices": [
+   "reptile",
+   "fish",
+   "amphibian",
+   "mammal"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_408436",
+  "question": "Jonathon was studying bears. He found out that bears are born with some behaviors and learn others from their environment. Which behavior does a bear most likely inherit?",
+  "choices": [
+   "how to find food in garbage cans",
+   "how to hibernate during the winter",
+   "how to seek shelter in a hollow log",
+   "how to live in human neighborhoods"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "TIMSS_2003_8_pg48",
+  "question": "Three gases found in Earth's atmosphere are carbon dioxide, nitrogen, and oxygen. What is their order of abundance from greatest to least?",
+  "choices": [
+   "nitrogen, oxygen, carbon dioxide",
+   "nitrogen, carbon dioxide, oxygen",
+   "oxygen, nitrogen, carbon dioxide",
+   "carbon dioxide, oxygen, nitrogen"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "CSZ20679",
+  "question": "To express the distance between the Milky Way galaxy and other galaxies, the most appropriate unit of measurement is the",
+  "choices": [
+   "meter.",
+   "kilometer.",
+   "light-year.",
+   "astronomical unit."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_408344",
+  "question": "Henry learned that without the right kind of energy, plants cannot survive. What form of energy is used by plants to perform photosynthesis?",
+  "choices": [
+   "electrical",
+   "light",
+   "mechanical",
+   "wind"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "MDSA_2009_8_37",
+  "question": "A power plant uses chemical energy to produce electricity. What source of energy does the power plant most likely use?",
+  "choices": [
+   "wind",
+   "sunlight",
+   "fossil fuel",
+   "tidal waves"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_412695",
+  "question": "Which set of elements have chemical properties similar to those of phosphorus?",
+  "choices": [
+   "nitrogen, arsenic, and antimony",
+   "carbon, selenium, and iodine",
+   "silicon, sulfur, and germanium",
+   "silicon, sulfur, and chlorine"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7001278",
+  "question": "Which instrument would be best for measuring the volume of a pebble?",
+  "choices": [
+   "metric ruler",
+   "stopwatch",
+   "triple beam balance",
+   "graduated cylinder"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "TIMSS_1995_8_Q16",
+  "question": "How long does it take light from the nearest star other than the Sun to reach Earth?",
+  "choices": [
+   "Less than 1 second",
+   "About 1 hour",
+   "About 1 month",
+   "About 4 years"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "CSZ_2008_5_CSZ10081",
+  "question": "What is at the center of our solar system?",
+  "choices": [
+   "a medium planet with an atmosphere.",
+   "a star composed of carbon and nitrogen.",
+   "a black hole that was once a star.",
+   "a star composed of hydrogen and helium."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_SC_401190",
+  "question": "Which of these items is designed to produce heat from electricity?",
+  "choices": [
+   "a toaster",
+   "a camera",
+   "a blender",
+   "a television"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_405940",
+  "question": "From simplest to most complicated, how are multicellular organisms organized?",
+  "choices": [
+   "organ system, organ, cell, tissue",
+   "organ, tissue, cell, organ system",
+   "tissue, cell, organ system, organ",
+   "cell, tissue, organ, organ system"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "VASoL_2009_3_26",
+  "question": "Which of these senses lets Dora know when a skunk has been close to her house?",
+  "choices": [
+   "Taste",
+   "Touch",
+   "Smell",
+   "Hearing"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_412298",
+  "question": "Increased human populations can lead to the depletion of locally available resources within communities. Compared to other communities, which of these locally available resources is most likely to be depleted in desert communities?",
+  "choices": [
+   "mineral",
+   "oxygen",
+   "gasoline",
+   "water"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_187460",
+  "question": "A switch that can open or close an electric circuit can be used to",
+  "choices": [
+   "increase the amount of current.",
+   "reverse the current's direction.",
+   "stop the current.",
+   "accelerate the current."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7217595",
+  "question": "A plover bird eats bits of food that become stuck in a crocodile's teeth without being hurt. The crocodile gets its teeth cleaned and the bird gets food. Which type of relationship exists between the bird and the crocodile?",
+  "choices": [
+   "mutualism",
+   "commensalism",
+   "parasitism",
+   "phototropism"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "TIMSS_2011_4_pg14",
+  "question": "During freezing, melting, and boiling, water changes from one state to another state. Heat needs to be supplied for which of these to take place?",
+  "choices": [
+   "boiling only",
+   "melting only",
+   "melting and freezing but not boiling",
+   "melting and boiling but not freezing"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_SC_402238",
+  "question": "What safety procedure should a student follow when a thermometer is broken during a lab experiment?",
+  "choices": [
+   "tell the teacher immediately",
+   "stop the experiment immediately",
+   "sweep the glass into a biohazard container",
+   "use a paper towel to pick up the pieces"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_LBS10588",
+  "question": "Plants that have stems that store water and no leaves would most likely live in a",
+  "choices": [
+   "pine forest.",
+   "grassland.",
+   "desert.",
+   "rainforest."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_LBS10619",
+  "question": "What remains in the same location in the sky of the Northern Hemisphere each night?",
+  "choices": [
+   "the Sun",
+   "the Little Dipper",
+   "the North Star",
+   "the Moon"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_408426",
+  "question": "A black bear's diet includes nuts, berries, honey, insects, and fish. Black bears are",
+  "choices": [
+   "decomposers.",
+   "herbivores.",
+   "omnivores.",
+   "prey."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7068600",
+  "question": "Which property of a mineral is most likely being tested when it is scratched with a nail?",
+  "choices": [
+   "color",
+   "hardness",
+   "cleavage",
+   "luster"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7216668",
+  "question": "Students are investigating the effects of different fertilizers on plant growth. Which units would be best to measure the mass of the fertilizer used?",
+  "choices": [
+   "meters",
+   "centimeters",
+   "grams",
+   "milligrams"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_401308",
+  "question": "Which event helps to renew a resource?",
+  "choices": [
+   "A seed is planted from a tree.",
+   "An offshore rig pumps oil.",
+   "A car is filled with gasoline.",
+   "An office is heated with coal."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7163363",
+  "question": "When humans move into an area, they sometimes plant grasses, flowers, or trees that are not native to the area. The non-native species sometimes choke out the native species. Which organism would most likely be harmed by a loss of native plants in the area?",
+  "choices": [
+   "the fungi that break down dead plants",
+   "the beetles that eat a variety of grass roots",
+   "the mosquitoes that hide under plant leaves",
+   "the caterpillars that eat only one type of plant"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "MCAS_2006_8_25",
+  "question": "Sal is looking at a map of Massachusetts. He has measured the distance, in inches, from Boston to Salem on the map. He wants to know how many actual miles the inches represent. What feature of the map should he look for?",
+  "choices": [
+   "key",
+   "scale",
+   "legend",
+   "compass"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7247923",
+  "question": "Which statement describes how the umbilical cord supports a developing fetus?",
+  "choices": [
+   "It provides a protective barrier between the mother and the fetus.",
+   "It keeps the fetus inside the mother until birth.",
+   "It provides a navel when the baby is born.",
+   "It supplies oxygen and nutrients to the fetus."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_412693",
+  "question": "Which sequence has the states of matter listed from least to greatest kinetic energy?",
+  "choices": [
+   "solid -> gas -> liquid",
+   "gas -> liquid -> solid",
+   "liquid -> solid -> gas",
+   "solid -> liquid -> gas"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "ACTAAP_2010_5_9",
+  "question": "Which is an example of a hypothesis?",
+  "choices": [
+   "Large mice will eat more food than smaller mice.",
+   "One flower was measured to be 13 centimeters tall.",
+   "On a dark night, a student counted hundreds of stars.",
+   "People should be careful to protect endangered animals."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_415262",
+  "question": "Which of the following could help to reduce a home heating bill in winter?",
+  "choices": [
+   "replacing wood doors with aluminum doors",
+   "using more insulation in the walls of the home",
+   "removing thick rugs and heavy curtains in the home",
+   "painting the roof of the home white to reflect light"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7008453",
+  "question": "Part of a student's experiment is to measure changes in wind speed several hours before a storm. What piece of equipment should the student use?",
+  "choices": [
+   "barometer",
+   "hygrometer",
+   "anemometer",
+   "weather vane"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7109428",
+  "question": "The nucleus contains DNA. Which statement best describes how DNA controls the working of the cell?",
+  "choices": [
+   "It codes for proteins.",
+   "It inhibits division of cells.",
+   "It helps in energy transformation.",
+   "It regulates traffic in and out of the cell."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7206063",
+  "question": "The climate of an area would be expected to have the least fluctuations in temperatures where the",
+  "choices": [
+   "atmospheric nitrogen is low.",
+   "vegetation is sparse.",
+   "days are longest.",
+   "humidity is high."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_400556",
+  "question": "What can be inferred from a food product advertisement that claims \"30% less fat than our leading competitors\"?",
+  "choices": [
+   "It is a sugar-free product.",
+   "It will help a person lose weight.",
+   "It is the healthiest choice available.",
+   "The fat content of the item is reduced."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "NAEP_2000_8_S11+5",
+  "question": "Which of the following best explains why the pressure inside a high-flying airplane must be controlled?",
+  "choices": [
+   "At high altitudes there is greater atmospheric pressure than on the surface of the Earth.",
+   "At high altitudes there is lower atmospheric pressure than on the surface of the Earth.",
+   "If the cabin is not pressurized, ozone and other upper atmospheric gases will enter the airplane.",
+   "If the cabin is not pressurized, carbon dioxide will escape from the airplane."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7198188",
+  "question": "As global temperatures increase, certain organisms will be more affected than others. The changes associated with global warming may result in an increase in sea level. Which organisms will be affected most as a result of the change in sea level?",
+  "choices": [
+   "birds that eat fish from shallow waters",
+   "fish that live in coral reefs in shallow waters",
+   "mammals that swim in cold, deep ocean waters",
+   "crustaceans at the bottom of deep sea ocean waters"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7007648",
+  "question": "A neutral atom is best described as having",
+  "choices": [
+   "more protons than neutrons.",
+   "more electrons than protons.",
+   "an equal number of protons and neutrons.",
+   "an equal number of protons and electrons."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "AKDE&ED_2008_8_31",
+  "question": "Which statement explains why ducklings follow their mother when swimming across a pond?",
+  "choices": [
+   "Survival behavior is acquired by interaction with the parent duck.",
+   "Survival behavior is learned by interacting with their environment.",
+   "Inherited behavior is genetically obtained through their environment.",
+   "Inherited behavior is genetically passed on from parents to offspring."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7222408",
+  "question": "Materials that let electrons flow very easily from one atom to another",
+  "choices": [
+   "are called insulators.",
+   "are called conductors.",
+   "are called non-metals.",
+   "are called resistors."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_402112",
+  "question": "Students are conducting an investigation to see how sunlight affects the speed of plant growth. They measure the growth of the plant at the end of two weeks. What would be the best way to communicate the results of this investigation?",
+  "choices": [
+   "draw a picture",
+   "make some notes",
+   "make a chart or graph",
+   "tell the science teacher"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_415363",
+  "question": "Ospreys are birds that eat fish. Where would an osprey most likely live?",
+  "choices": [
+   "near a forest",
+   "near a marsh",
+   "near a desert",
+   "near a prairie"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "TIMSS_2011_4_pg102",
+  "question": "What causes an object to fall to the ground when you let it drop from your hand?",
+  "choices": [
+   "magnetism",
+   "gravity",
+   "air resistance",
+   "the push from your hand"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7086783",
+  "question": "The finest-grained soils are richest in",
+  "choices": [
+   "sand.",
+   "humus.",
+   "clay.",
+   "iron."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_402044",
+  "question": "About how long is a lunar cycle?",
+  "choices": [
+   "1 day",
+   "1 week",
+   "28 days",
+   "52 weeks"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "MEA_2016_8_2",
+  "question": "Which statement best describes why the Moon is visible from Earth?",
+  "choices": [
+   "The Moon reflects light from other planets.",
+   "The Moon reflects light from the Sun.",
+   "Light is produced by the Moon.",
+   "Light from Earth illuminates the Moon."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_415583",
+  "question": "In a turtle race, each turtle walks one a 3-meter track. If the turtles walk one at a time, how can you tell which turtle was fastest?",
+  "choices": [
+   "The turtle that started first is fastest.",
+   "The turtle that finished first is fastest.",
+   "The turtle that took the shortest time is fastest.",
+   "The turtle that took the longest time is fastest."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7250005",
+  "question": "All living things are made up of prokaryotic or eukaryotic cells. Which function is found in both prokaryotic and eukaryotic cells?",
+  "choices": [
+   "aerobic respiration",
+   "sexual reproduction",
+   "protein production",
+   "nitrogen fixation"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_404614",
+  "question": "Which is considered a property of soil?",
+  "choices": [
+   "streak",
+   "fracture",
+   "texture",
+   "luster"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7038850",
+  "question": "Which of these materials transfers heat energy quickest?",
+  "choices": [
+   "metal",
+   "glass",
+   "plastic",
+   "wood"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7245245",
+  "question": "After which event will primary succession most likely occur?",
+  "choices": [
+   "thunderstorm",
+   "crop harvest",
+   "volcanic eruption",
+   "urban development"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_405056",
+  "question": "Students are comparing different rocks. What do all rocks have in common?",
+  "choices": [
+   "Rocks are made of one or more minerals.",
+   "Rocks are made of two or more elements.",
+   "Rocks are made of magma and sediments.",
+   "Rocks are made of sand changed by pressure."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "NYSEDREGENTS_2013_8_27",
+  "question": "Which geologic process occurs when the acid in precipitation dissolves certain types of rock?",
+  "choices": [
+   "faulting",
+   "tilting",
+   "weathering",
+   "erupting"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7200060",
+  "question": "Estuaries are marine environments located in areas where fresh water from rivers flow into the ocean. Estuaries are one of the most biologically productive ecosystems. Birds, fish, turtles and many other organisms inhabit these ecosystems. Which will most likely cause changes to estuary habitats on a global scale?",
+  "choices": [
+   "decreases in powerful hurricanes",
+   "decreases in volcanic eruptions",
+   "increases in earthquakes",
+   "increases in sea level"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7018463",
+  "question": "Which characteristic of sound makes it possible for bats to fly in the dark without hitting any objects?",
+  "choices": [
+   "refraction",
+   "reflection",
+   "conduction",
+   "amplification"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7138863",
+  "question": "A teacher was discussing with the class that a bowling ball has more inertia than a basketball. Which physical property is most likely being compared?",
+  "choices": [
+   "area",
+   "mass",
+   "weight",
+   "volume"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "MCAS_2003_5_3",
+  "question": "What causes sound?",
+  "choices": [
+   "sunlight",
+   "vibrations",
+   "x-rays",
+   "pitch"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7200148",
+  "question": "It took Stephen 12 seconds to run across a grass field. Which additional information does he need in order to calculate his acceleration during the run?",
+  "choices": [
+   "the direction he ran and the average speed",
+   "the distance he ran and the average velocity",
+   "the beginning speed and the direction he ran",
+   "the beginning velocity and the ending velocity"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "TIMSS_2011_8_pg98",
+  "question": "What is the chemical formula for carbon dioxide?",
+  "choices": [
+   "CO",
+   "CO2",
+   "C",
+   "O2"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_407259",
+  "question": "Which action results in a chemical change?",
+  "choices": [
+   "apples being cut into slices",
+   "wood burning in a fireplace",
+   "wet clothes drying on a clothesline",
+   "snow being shoveled off of a sidewalk"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_401779",
+  "question": "Which of the following is the best conductor of heat?",
+  "choices": [
+   "oven mitts",
+   "a metal bowl",
+   "a wooden spoon",
+   "rubber soled shoes"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7218908",
+  "question": "Weather stations built in urban areas can be influenced by the human-made structures that surround these stations. Some of these weather stations used to determine mean temperatures in the United States have had the validity of the data questioned. Which human-produced effect could these urban weather stations be measuring?",
+  "choices": [
+   "heat island",
+   "rain shadow",
+   "land breeze",
+   "cold front"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "TIMSS_2007_4_pg64",
+  "question": "Which is the best source of vitamins and minerals?",
+  "choices": [
+   "fruits and vegetables",
+   "bread, rice, and pasta",
+   "milk and milk products",
+   "meat, fish, and poultry"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7268153",
+  "question": "What is the function of hollow bones in birds?",
+  "choices": [
+   "to streamline birds for efficient flight",
+   "to reduce the weight of birds for flight",
+   "to store oxygen for high-altitude flight",
+   "to make bones strong enough for flight"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "MCAS_2010_8_12008",
+  "question": "What is the smallest unit of a chemical compound that still has the properties of that compound?",
+  "choices": [
+   "a nucleus",
+   "a molecule",
+   "an element",
+   "an atom"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "MDSA_2008_8_38",
+  "question": "Earthquakes and volcanic eruptions occur both on land and in water. Earthquakes and volcanic eruptions most often occur",
+  "choices": [
+   "near plate boundaries",
+   "on large pieces of land",
+   "in large bodies of water",
+   "in regions near the equator"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_405026",
+  "question": "A class made a solar cooker out of a large can. What color should they paint the can in order to collect the most heat?",
+  "choices": [
+   "black",
+   "green",
+   "pink",
+   "white"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "MCAS_1999_4_25",
+  "question": "Which of the following is a way that everyone can help with conservation efforts?",
+  "choices": [
+   "camp in the woods",
+   "use biodegradable materials",
+   "visit a landfill",
+   "use disposable plates"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_LBS10523",
+  "question": "What process makes it possible for the nutrients from organic material to be added to soil?",
+  "choices": [
+   "weathering",
+   "erosion",
+   "decomposition",
+   "succession"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "MEA_2010_8_9-v1",
+  "question": "During which process does genetic material come from two parents?",
+  "choices": [
+   "asexual reproduction",
+   "photosynthesis",
+   "respiration",
+   "sexual reproduction"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7211260",
+  "question": "Which widely used energy sources are nonrenewable and also a source of greenhouse gas emissions?",
+  "choices": [
+   "wind turbines",
+   "hydroelectric dams",
+   "fossil fuels",
+   "solar cells"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_402094",
+  "question": "The area of a small ocean island is slowly shrinking. This is most likely the result of which occurrence?",
+  "choices": [
+   "plant growth",
+   "beach erosion",
+   "dissolving rock",
+   "falling water"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "NYSEDREGENTS_2015_8_2",
+  "question": "A student viewing a cell with a microscope observes a cell wall, a cell membrane, and a nucleus. The presence of these structures indicates that the student is looking at a cell from a",
+  "choices": [
+   "rabbit",
+   "carrot",
+   "worm",
+   "fly"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "MCAS_2005_9_11",
+  "question": "Two boxes, A and B, both contain the same number of nitrogen gas molecules. The gas molecules in box A have twice the average speed of the molecules in box B. Which of the following best describes the nitrogen gas in box A?",
+  "choices": [
+   "The nitrogen gas in box A has a greater mass than the nitrogen gas in box B.",
+   "The nitrogen gas in box A has a greater density than the nitrogen gas in box B.",
+   "The nitrogen gas in box A has a greater temperature than the nitrogen gas in box B.",
+   "The nitrogen gas in box A has a greater specific gravity than the nitrogen gas in box B."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7165690",
+  "question": "A student performs an investigation using anti-bacterial hand soap. The student washes only his left hand with anti-bacterial soap, but cultures swabs from both hands. The cultures from both hands were incubated at room temperature for 48 hours before being examined. Which best explains the purpose of using soap on only the left hand?",
+  "choices": [
+   "to act as a controlled variable for the investigation",
+   "to act as the dependent variable for the investigation",
+   "to provide another testable variable for the investigation",
+   "to serve as the independent variable for the investigation"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7234395",
+  "question": "Overuse of which water resource tends to cause land to subside?",
+  "choices": [
+   "ocean water",
+   "aquifer water",
+   "river water",
+   "lake water"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_400988",
+  "question": "Making aluminum cans from recycled materials instead of raw materials is a wise choice because it",
+  "choices": [
+   "saves time.",
+   "saves trees.",
+   "creates energy.",
+   "reduces pollution."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "OHAT_2009_5_42",
+  "question": "Which organism is a decomposer?",
+  "choices": [
+   "frog",
+   "worm",
+   "oak tree",
+   "grasshopper"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_411419",
+  "question": "Plants that are different from each another may have similar structures. Which structure do all plants have in common?",
+  "choices": [
+   "flowers",
+   "fruit",
+   "roots",
+   "trunks"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_400525",
+  "question": "Photosynthesis and respiration are both parts of which cycle?",
+  "choices": [
+   "carbon cycle",
+   "nitrogen cycle",
+   "phosphorous cycle",
+   "rock cycle"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_400099",
+  "question": "When humans first began to grow crops, which of these most likely contributed to the extinction of native animal species?",
+  "choices": [
+   "pollution",
+   "climate change",
+   "habitat destruction",
+   "tectonic plate motion"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_408709",
+  "question": "As seen from Earth, the appearance of the Moon changes throughout the month. What causes the appearance of the Moon to change?",
+  "choices": [
+   "Earth rotating on its axis",
+   "the Moon rotating on its axis",
+   "Earth revolving around the Sun",
+   "the Moon revolving around Earth"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "NYSEDREGENTS_2015_4_12",
+  "question": "Which object is the best conductor of electricity?",
+  "choices": [
+   "glass rod",
+   "wooden stick",
+   "plastic straw",
+   "metal nail"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "TIMSS_2003_8_pg19",
+  "question": "When chlorine gas reacts with sodium metal, what type of substance is formed?",
+  "choices": [
+   "A mixture",
+   "A compound",
+   "An element",
+   "An alloy",
+   "A solution"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "TAKS_2009_8_24",
+  "question": "As a river enters a larger body of water, sediments are deposited over a wide area. Which of these landforms is likely to be formed at the site of deposition?",
+  "choices": [
+   "Cave",
+   "Mountain",
+   "Delta",
+   "Valley"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7034825",
+  "question": "Which is the best example of a chemical reaction?",
+  "choices": [
+   "blocked sunlight casts a shadow",
+   "sunlight evaporates water from a lake",
+   "oxygen absorbs sunlight forming ozone molecules",
+   "a prism refracts sunlight into light of different wavelengths"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7128853",
+  "question": "As the loudness of a sound wave increases, which will also increase?",
+  "choices": [
+   "amplitude",
+   "frequency",
+   "velocity",
+   "wavelength"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7124093",
+  "question": "A roller coaster is climbing up the highest hill on its track. At which point will the front car of the coaster most likely have its greatest potential energy?",
+  "choices": [
+   "at the bottom of the highest hill",
+   "at the top of the highest hill",
+   "at the start of the track",
+   "at the end of the track"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7092243",
+  "question": "Which of these will most likely occur if chemicals from fertilizers run off into lakes and streams?",
+  "choices": [
+   "Water quality will improve.",
+   "Aquatic animals will thrive.",
+   "Fish will die from a lack of oxygen.",
+   "Aquatic plants will stop growing."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "OHAT_2010_8_29",
+  "question": "Aphids are small insects that sometimes live near ants. The ants protect the aphids from predators. The aphids produce a sweet substance that the ants eat. Which statement describes the relationship between ants and aphids?",
+  "choices": [
+   "Both ants and aphids benefit.",
+   "Both ants and aphids are unaffected.",
+   "The ants benefit and the aphids are harmed.",
+   "The aphids benefit and the ants are unaffected."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "MEAP_2004_8_48",
+  "question": "What unit of measure should Jerry use to report the volume of a liquid?",
+  "choices": [
+   "degrees Celsius",
+   "kilograms",
+   "milliliters",
+   "centimeters"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "VASoL_2007_5_38",
+  "question": "A student sees many plants around a pond. The student can determine which plants are nonvascular by",
+  "choices": [
+   "observing if they lack true stems, roots, or leaves",
+   "examining the plants for spores",
+   "counting the number of leaves on each stalk",
+   "noticing if the plants are near rocks"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_408939",
+  "question": "Juan noticed that sunny skies suddenly became stormy. Which most likely happened when the weather changed in this way?",
+  "choices": [
+   "Winds weakened.",
+   "Humidity decreased.",
+   "Air pressure dropped.",
+   "Temperatures increased."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_408357",
+  "question": "Kurt drinks frozen fruit juice from a small cup. He measures the amount of fruit juice in the cup. Which property is Kurt measuring?",
+  "choices": [
+   "density",
+   "height",
+   "temperature",
+   "volume"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7056910",
+  "question": "Which of these organisms is classified as a decomposer?",
+  "choices": [
+   "hawk",
+   "mushroom",
+   "mouse",
+   "grass"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_405499",
+  "question": "Jagged mountains would most likely become rounded hills through which process?",
+  "choices": [
+   "erosion",
+   "deposition",
+   "volcanic activity",
+   "chemical change"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7024675",
+  "question": "Which of the following is influenced by both genetics and behavior?",
+  "choices": [
+   "eye color",
+   "hair texture",
+   "blood type",
+   "body weight"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7001855",
+  "question": "A student drops a white tablet into a glass of water, producing carbon dioxide gas. This is a demonstration of",
+  "choices": [
+   "a change of state.",
+   "a chemical reaction.",
+   "the creation of matter.",
+   "the movement of electricity."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_400658",
+  "question": "A brown bear eats a variety of foods including berries, insects, and small animals. Which best describes a brown bear?",
+  "choices": [
+   "producer",
+   "herbivore",
+   "carnivore",
+   "omnivore"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7182963",
+  "question": "When Dennis operates his lawnmower, he notices the engine makes a lot of noise. He also notices that the engine gets very hot. Which best describes the heat and noise generated from the lawnmower?",
+  "choices": [
+   "a change in phase",
+   "thermal expansion",
+   "an increase in entropy",
+   "mechanical advantage"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_LBS10064",
+  "question": "Which activity requires the use of safety goggles to protect the eyes?",
+  "choices": [
+   "collecting rain water",
+   "measuring air temperature",
+   "classifying flowers",
+   "pouring vinegar"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7071803",
+  "question": "Which of these were formed by glaciers that flowed through the Ruby Mountain region in northeastern Nevada?",
+  "choices": [
+   "lakes",
+   "deserts",
+   "volcanic necks",
+   "V-shaped valleys"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7017798",
+  "question": "What has occurred when bubbles form in a liquid that is being heated?",
+  "choices": [
+   "Oxygen is absorbed from the air.",
+   "Heat is radiating in the liquid.",
+   "The boiling point has been reached.",
+   "Molecular stability in the liquid is increasing."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7161473",
+  "question": "The phases of the Moon are daily changes in the appearance of the Moon. One reason Moon phases occur is because the Moon reflects sunlight. Which is another reason that the phases of the Moon occur?",
+  "choices": [
+   "Earth is tilted on the axis.",
+   "The Moon rises and sets.",
+   "The Moon orbits Earth.",
+   "Earth orbits the Sun."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7181633",
+  "question": "During a biochemical reaction, pyruvate (C3H4O3) is converted into carbon dioxide (CO2) and water (H2O). In what cellular organelle does this biochemical reaction occur?",
+  "choices": [
+   "nucleus",
+   "cytoplasm",
+   "mitochondria",
+   "endoplasmic reticulum"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7187250",
+  "question": "When a volcano erupts, new lava is deposited on the slopes of the volcano. After the lava cools and hardens, which types of organisms will most likely be the first to live on the new material?",
+  "choices": [
+   "large reptiles and amphibians",
+   "small birds and mammals",
+   "mosses and lichens",
+   "bushes and vines"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_400060",
+  "question": "Which statement below best explains why several fossils of sea organisms were discovered buried deep in an area of dry land?",
+  "choices": [
+   "The fossils changed locations.",
+   "The area had a shift in climate.",
+   "The land was once underwater.",
+   "A glacier once covered the area."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7112805",
+  "question": "The ichthyornis was a type of bird that lived over 65 million years ago. It lived near the sea and hunted for fish over the water. Fossils have been found in Kansas, many miles from the present-day ocean. Which cause of extinction is most likely to be found in the fossil record along with ichthyornis fossils?",
+  "choices": [
+   "changes in the environment",
+   "diseases causing illness",
+   "changes in the weather",
+   "predator animals"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "ACTAAP_2007_7_27",
+  "question": "What is the liquid layer of Earth that lies beneath the mantle?",
+  "choices": [
+   "inner core",
+   "outer core",
+   "mesosphere",
+   "asthenosphere"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_416539",
+  "question": "The empty spaces in a material are called pores. Porosity is the amount of empty space within a material. Permeability describes how well the pores in a material are connected. Which of these materials would make the most effective aquifer?",
+  "choices": [
+   "a material that has high porosity and high permeability",
+   "a material that has high porosity and low permeability",
+   "a material that has low porosity and high permeability",
+   "a material that has low porosity and low permeability"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_405004",
+  "question": "Ned learned that light is a source of energy. Which can only result from light energy?",
+  "choices": [
+   "an ice cube melting",
+   "a rainbow forming",
+   "water evaporating",
+   "thunder booming"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "LEAP__8_10369",
+  "question": "Joyce put 200 milliliters of water in a beaker, put a thermometer in it, and heated it until it started to boil. She recorded a temperature of 100\u00b0C when it started to boil. She repeated the process with 400 milliliters of water. What would be the temperature when this second sample started to boil?",
+  "choices": [
+   "twice as high as the first sample's",
+   "slightly higher than the first sample's",
+   "half as high as the first sample's",
+   "the same as the first sample's"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7043873",
+  "question": "What happens to a moist air mass as it moves upward in the atmosphere?",
+  "choices": [
+   "It becomes warmer and forms clouds.",
+   "It becomes cooler and forms clouds.",
+   "Its temperature remains the same.",
+   "Its temperature varies greatly."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_416164",
+  "question": "Ella waves good-bye from the bus. What body system pulls on bones to let Ella wave her arm?",
+  "choices": [
+   "muscular system",
+   "nervous system",
+   "digestive system",
+   "circulatory system"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "AIMS_2009_4_13",
+  "question": "All animals need air to survive. An insect gets air through tiny holes on the sides of its body. A whale breathes through a blow hole. What body part do fish use to breathe?",
+  "choices": [
+   "gills",
+   "skin",
+   "nose",
+   "mouth"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "VASoL_2009_3_25",
+  "question": "Which job is done in Virginia only during the fall season?",
+  "choices": [
+   "Picking apples",
+   "Feeding animals",
+   "Selling clothes",
+   "Building houses"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_410275",
+  "question": "One student rubs a balloon against his hair several times. Another student passes a comb through her hair several times. The students place the comb near the balloon and observe that the comb repels the balloon. Which is the most likely reason the comb is able to repel the balloon?",
+  "choices": [
+   "The balloon has a positive charge and the comb is neutral.",
+   "The balloon and the comb have the same electrical charge.",
+   "The balloon has a negative charge and the comb is neutral.",
+   "The balloon and the comb have opposite electrical charges."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_405595",
+  "question": "Which of the following lists units of length from smallest to largest?",
+  "choices": [
+   "light-year, astronomical unit, kilometer, angstrom",
+   "angstrom, kilometer, astronomical unit, light-year",
+   "astronomical unit, angstrom, kilometer, light-year",
+   "kilometer, angstrom, light-year, astronomical unit"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "VASoL_2009_5_8",
+  "question": "Which of these best describes the Moon?",
+  "choices": [
+   "Older than Earth",
+   "Smaller than Earth",
+   "Having the same climate as Earth",
+   "Having the same atmosphere as Earth"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_410624",
+  "question": "Many sports stadiums use grass, but some use fake grass called artificial turf. Artificial turf is made of fibers that look like real grass. In which way is this technology most likely beneficial?",
+  "choices": [
+   "It uses less water.",
+   "It produces more heat.",
+   "It releases less moisture.",
+   "It absorbs more carbon dioxide."
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "NYSEDREGENTS_2013_8_19",
+  "question": "Abnormal cell division may result in",
+  "choices": [
+   "disease prevention",
+   "tissue repair",
+   "metamorphosis",
+   "cancer"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "VASoL_2008_3_33",
+  "question": "Soil is important to a forest because the soil ___.",
+  "choices": [
+   "stores sunlight in the leaves",
+   "attracts insects that eat leaves",
+   "provides nutrients to the trees",
+   "warms the air around the trees"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7166390",
+  "question": "Louis was investigating physical and chemical changes in matter. Which of these changes that Louis found involves a chemical change in matter?",
+  "choices": [
+   "evaporation of water",
+   "grinding of rock",
+   "melting of ice",
+   "rusting of iron"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7239733",
+  "question": "Meiosis is a type of cell division in which germ cells divide to produce haploid cells. Where does meiosis occur?",
+  "choices": [
+   "brain cells",
+   "bone cells",
+   "muscle cells",
+   "ovary cells"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "MCAS_2005_9_3-v1",
+  "question": "Before concrete has hardened, it exhibits plasticity. This is an advantage because it allows the concrete to",
+  "choices": [
+   "become strong as it cures.",
+   "withstand compression.",
+   "remain pliable after hardening.",
+   "be molded into almost any shape."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_SC_401319",
+  "question": "An organism that breaks down dead plants and animals, returning matter back into the soil, is called a",
+  "choices": [
+   "herbivore.",
+   "producer.",
+   "competitor.",
+   "decomposer."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "NYSEDREGENTS_2013_4_29",
+  "question": "Which items would be most useful at home during a power failure?",
+  "choices": [
+   "flashlights and extra batteries",
+   "hats and sunscreen",
+   "raincoats and umbrellas",
+   "insect spray and jackets"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7121905",
+  "question": "In what form do plants store the energy produced from sunlight?",
+  "choices": [
+   "radiant",
+   "thermal",
+   "chemical",
+   "mechanical"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "NYSEDREGENTS_2010_4_15",
+  "question": "As the distance between a magnet and a metal paper clip increases, the force of attraction between them",
+  "choices": [
+   "decreases",
+   "increases",
+   "remains the same"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "TIMSS_1995_8_L5",
+  "question": "When a bird sings, it is most likely singing in order to",
+  "choices": [
+   "frighten away other types of birds",
+   "mark the bird's territory against the same type of bird",
+   "attract insects",
+   "wake up other animals"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7023275",
+  "question": "Which event is an example of a chemical change?",
+  "choices": [
+   "fog rising off a river",
+   "wood burning in a fireplace",
+   "ice cream melting in the sunshine",
+   "grinding peppercorn into pepper flakes"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7007840",
+  "question": "A pan containing hot water is left on the counter and becomes cool mainly due to",
+  "choices": [
+   "water molecules moving apart.",
+   "cold air penetrating the hot water.",
+   "heat from the water moving into the cooler air.",
+   "hot water reacting with the metal pan."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7283710",
+  "question": "All energy resources have benefits, risks, and drawbacks. Which two resources present the most dangerous risks and consequences for the environment during their acquisition?",
+  "choices": [
+   "oil and coal",
+   "coal and solar energy",
+   "geothermal energy and oil",
+   "solar energy and geothermal energy"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "CSZ_2004_5_CSZ20156",
+  "question": "Which list gives the correct order of food traveling through the digestive system after it is swallowed?",
+  "choices": [
+   "stomach, esophagus, large intestine, small intestine.",
+   "small intestine, large intestine, esophagus, stomach.",
+   "esophagus, stomach, large intestine, small intestine.",
+   "esophagus, stomach, small intestine, large intestine."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_406741",
+  "question": "Which best explains why it is important for a doctor's office to keep accurate records of the medicines prescribed for their patients?",
+  "choices": [
+   "to know how many people take medicines",
+   "to keep track of all of the people who are sick",
+   "to keep track of the next scheduled appointments",
+   "to know if there is a risk for harmful side effects"
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7007788",
+  "question": "All of these elements are metals except",
+  "choices": [
+   "gold.",
+   "helium.",
+   "sodium.",
+   "aluminum."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_SC_401000",
+  "question": "The following advertisement was placed in the window of a camping supply store. \"The double-thermal 'Polar Snooze' sleeping bag is here! It will keep you warm for winter camping!\" Based on this advertisement, the best conclusion about Polar Snooze sleeping bags is that they",
+  "choices": [
+   "are lightweight.",
+   "have insulation.",
+   "make winter camping easy.",
+   "cost less than other sleeping bags."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "MCAS_8_2015_12",
+  "question": "Which of the following statements best describes how the use of interchangeable parts has affected car manufacturing?",
+  "choices": [
+   "The number of cars produced has decreased.",
+   "The need for custom manufacturing has increased.",
+   "The efficiency of manufacturing plants has increased.",
+   "The number of countries producing cars has decreased."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_SC_400005",
+  "question": "A tree uses gas A to produce gas B. An animal uses gas B to produce gas A. What is gas B in this cycle?",
+  "choices": [
+   "oxygen",
+   "nitrogen",
+   "carbon dioxide",
+   "carbon monoxide"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7008593",
+  "question": "What are the building blocks of all matter?",
+  "choices": [
+   "atoms",
+   "forces",
+   "cells",
+   "vacuoles"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_7005513",
+  "question": "Plants use carbon dioxide from the atmosphere during the process of",
+  "choices": [
+   "respiration.",
+   "fertilization.",
+   "evaporation.",
+   "photosynthesis."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "Mercury_7081288",
+  "question": "A student organizes a list of the distances that five students ran in 10 minutes. Another way to best organize this data is by using a",
+  "choices": [
+   "pie graph.",
+   "bar graph.",
+   "line graph.",
+   "pictograph."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_411737",
+  "question": "Which of these colors of visible light has the shortest wavelength?",
+  "choices": [
+   "red",
+   "green",
+   "violet",
+   "yellow"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "AKDE&ED_2012_8_4",
+  "question": "A student wants to organize a group of animals into two categories based on observable external features. Which display will most appropriately show the two categories of animals?",
+  "choices": [
+   "a timeline",
+   "a pie chart",
+   "a data table",
+   "a line graph"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "OHAT_2011_5_37",
+  "question": "The class puts the planters by the window so that the plants can get more sunlight. How do the tomato plants use sunlight?",
+  "choices": [
+   "to make sugar in the leaves",
+   "to use starch from the stems",
+   "to move water to the flowers",
+   "to get nutrients through the roots"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_416097",
+  "question": "Which plant part is described correctly?",
+  "choices": [
+   "Stems make seeds.",
+   "Roots absorb nutrients.",
+   "Leaves absorb water.",
+   "Flowers make food."
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "MCAS_2012_8_23654",
+  "question": "The winter solstice occurs on either December 21 or 22, depending on the year. Which of the following statements best explains why the time of the year the winter solstice occurs has the least amount of daylight in Massachusetts?",
+  "choices": [
+   "Earth is farthest away from the Sun on the winter solstice.",
+   "Earth's rotational speed on its axis is greatest on the winter solstice.",
+   "Earth is traveling around the Sun with the greatest speed on the winter solstice.",
+   "Earth's Northern Hemisphere is tilted away from the Sun on the winter solstice."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "MCAS_1999_4_4",
+  "question": "Mount Arenal, a volcano in Costa Rica, is erupting. Heat is being released during the eruption. What is the source of the heat?",
+  "choices": [
+   "The heat comes from the Sun.",
+   "The heat comes from pools of underground water.",
+   "The heat comes from deep within Earth.",
+   "The heat comes from decaying plants and animals."
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "Mercury_7215478",
+  "question": "Some dairy farmers want their cows to produce greater amounts of milk than average cows. Which process will help the dairy farmers develop cows with this trait?",
+  "choices": [
+   "selective breeding",
+   "behavioral modification",
+   "ecological succession",
+   "geographical isolation"
+  ],
+  "gold": 0
+ },
+ {
+  "qid": "Mercury_SC_405219",
+  "question": "Refrigerators were invented to keep food cold. This is helpful in",
+  "choices": [
+   "growing food.",
+   "cleaning food.",
+   "keeping food dry.",
+   "keeping food fresh."
+  ],
+  "gold": 3
+ },
+ {
+  "qid": "MEA_2010_8_15-v1",
+  "question": "Which device produces mechanical energy?",
+  "choices": [
+   "a battery",
+   "an electric motor",
+   "a light bulb",
+   "a solar cooker"
+  ],
+  "gold": 1
+ },
+ {
+  "qid": "Mercury_7239365",
+  "question": "A large plant population may impose selective pressure on a smaller, isolated group of plants, resulting in a change in allele distribution. Which mechanism is responsible for this change in the allele distribution?",
+  "choices": [
+   "mutation",
+   "hybridization",
+   "genetic drift",
+   "trait acquisition"
+  ],
+  "gold": 2
+ },
+ {
+  "qid": "ACTAAP_2010_7_17",
+  "question": "Which is an effect that cities have on the weather?",
+  "choices": [
+   "Small numbers of plants cause rain to fall more often.",
+   "Large numbers of houses cause the wind to be stronger.",
+   "Small areas of open water cause fog to be more common.",
+   "Large areas of pavement cause the temperature to be hotter."
+  ],
+  "gold": 3
+ }
+]
