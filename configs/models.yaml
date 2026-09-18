@@ -1,6 +1,6 @@
 # Which spec the CI gate evaluates on a pull request.
 # The demo PRs in M10 work by changing this single line.
-under_test: qwen0.5b-q4km
+under_test: smollm2-360m-q8
 
 models:
   # ---- PR tier: 0.5B on CPU, small enough for a GitHub-hosted runner ----
