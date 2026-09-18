@@ -1,0 +1,54 @@
+name: gate
+
+on:
+  pull_request:
+    paths:
+      - "configs/**"
+      - "correctness_gate/**"
+      - "data/**"
+      - "baselines/**"
+      - ".github/workflows/gate.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+
+  model-gate:
+    runs-on: ubuntu-latest
+    needs: unit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Resolve model under test
+        id: model
+        run: |
+          echo "name=$(python -c 'import yaml; print(yaml.safe_load(open("configs/models.yaml"))["under_test"])')" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: models
+          key: gguf-${{ steps.model.outputs.name }}
+      - run: python scripts/fetch_model.py --model "${{ steps.model.outputs.name }}"
+      - name: Score candidate
+        run: cgate run --model "${{ steps.model.outputs.name }}" --out results/candidate.json
+      - name: Gate
+        run: cgate compare --baseline baselines/qwen0.5b-q4km.json --candidate results/candidate.json --report report.md
+      - name: Comment on PR
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file report.md || true
