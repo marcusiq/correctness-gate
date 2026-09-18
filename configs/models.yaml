@@ -20,6 +20,14 @@ models:
     device: cpu
     url: https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q2_k.gguf
 
+  # Demo candidate for a failing PR: a smaller model swapped in to cut serving
+  # cost. Different model family, same items and execution config.
+  smollm2-360m-q8:
+    backend: llamacpp
+    path: models/smollm2-360m-instruct-q8_0.gguf
+    device: cpu
+    url: https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct-GGUF/resolve/main/smollm2-360m-instruct-q8_0.gguf
+
   # ---- scorer validation: the exact configuration the lm-eval fixture used ----
   qwen0.5b-hf:
     backend: hf
