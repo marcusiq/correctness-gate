@@ -29,7 +29,8 @@ class ModelSpec:
     backend: str            # "llamacpp" or "hf"
     path: str               # .gguf path (llamacpp) or HF model id / local dir (hf)
     url: str = ""           # optional download source, used by scripts/fetch_model.py
-    device: str = "cpu"     # "cpu" evicts CUDA from the process before load
+    device: str = "cpu"     # sets n_gpu_layers=0 only; on a CUDA build set
+                            # CUDA_VISIBLE_DEVICES= too, or large matmuls still run on the GPU
     dtype: str = "float32"  # hf only; float32 is the determinism-friendly default
     n_ctx: int = 640        # llamacpp only; the logits buffer is n_ctx x vocab floats
     n_threads: int = 4      # llamacpp only; stay at or below physical cores

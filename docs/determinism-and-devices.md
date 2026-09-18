@@ -43,23 +43,47 @@ Not merely equal accuracies: identical log-probabilities in every position. This
 what the M0 audit found for the CPU path, and it is what licenses the determinism tier to
 vary configuration rather than repeat runs.
 
-## Measured: batch geometry on CPU
+## Measured: batch geometry
 
 ```
-cgate invariance --model qwen0.5b-q4km --k 8
+python scripts/invariance_longest.py --device cpu
+python scripts/invariance_longest.py --device cuda
 ```
 
-n_batch 512 vs 32, 8 items: max abs logit delta 0.0, bitwise identical.
+qwen0.5b-q4km, the 8 longest items (68 to 115 tokens; the set's median is 27, so the
+first-k selection `cgate invariance` uses mostly tests sequences shorter than one chunk
+and cannot show a difference by construction). Prefill chunked at n_batch 512 vs the
+smaller size. Max abs logit delta, greedy flips in parentheses:
 
-**Caveat, not yet resolved.** Item sequences here run roughly 10 to 120 tokens. Any
-sequence shorter than 32 tokens is processed as a single chunk under both settings, so
-those items cannot show a difference by construction. Until the check reports the token
-count of each sequence it tested, this result is not evidence of invariance. Re-run with
-a smaller `small` and with the longest items selected.
+| build and device | 512 vs 32 | 512 vs 8 | 512 vs 1 |
+|---|---|---|---|
+| CPU-only wheel (GGML_NATIVE=OFF, AVX2) | 0.0 | 0.0 | 0.976 (4) |
+| CUDA wheel, `CUDA_VISIBLE_DEVICES=`, 0 layers | 0.0 | 0.0 | 1.096 (1) |
+| CUDA wheel, GPU visible, 0 layers | 0.966 (2) | 1.565 (4) | 1.611 (3) |
+| CUDA wheel, all layers offloaded | 0.881 (0) | 3.419 (2) | 2.761 (2) |
 
-## Measured: CPU versus CUDA moves both scores and decisions
+- True CPU prefill is bitwise batch-invariant for chunks of 8 or more. Single-token
+  chunks take a different (matrix-vector) path and differ. The gate scores each
+  sequence in one chunk, so its numbers sit on the invariant path.
+- The two CPU rows differ at n_batch 1 (0.976 vs 1.096): the native build on this
+  AVX-512 machine and the pinned AVX2 build are different kernels.
+- With a CUDA build and a visible GPU, `n_gpu_layers=0` behaves like a GPU run.
+  "0 layers offloaded" is not "CPU".
 
-Same weights, same items, same code. Only the device differs.
+## Measured: layer offload moves both scores and decisions
+
+> **Correction (2026-09-18).** This section was first written as "CPU versus CUDA".
+> The `validation-cpu` records were produced by the CUDA build of llama-cpp-python
+> with `n_gpu_layers=0` and the GPU still visible to the process. That is not a CPU
+> run: llama.cpp still sends large matrix multiplications to a visible GPU. Evidence:
+> re-scoring 10 items of 3B Q4_K_M under that setup reproduces the record exactly
+> (max |dlogp| 0.0); with `CUDA_VISIBLE_DEVICES=` set, the same code differs from it
+> by up to 4.1 nats. The comparison below is therefore "0 layers offloaded on a CUDA
+> build" versus "all layers offloaded". The measured divergence and decision counts
+> stand; the attribution to CPU versus GPU kernels does not. See the batch-geometry
+> section for the invariance measurement that exposed this.
+
+Same weights, same items, same code. Only the offload configuration differs.
 
 ```
 sed 's/device: cuda/device: cpu/' configs/models.yaml > configs/models.cpu.yaml
@@ -80,11 +104,12 @@ model (200 items x 4 choices), so 4,000 in total.
 
 89 of 2,000 gate-relevant decisions changed. Four things follow.
 
-**Quantization, not the device, is the source.** The f16 model is the control: identical
-weights, identical items, different device, and its median divergence is 0.0139 with 3 of
-400 decisions moved. Every quantized variant is an order of magnitude worse. The CPU and
-CUDA paths do not dequantize k-quant blocks identically, and unquantized weights have
-nothing to dequantize.
+**Quantization amplifies it.** The f16 model is the control: identical weights, identical
+items, different offload configuration, and its median divergence is 0.0139 with 3 of 400
+decisions moved. Every quantized variant is an order of magnitude worse. Which kernels run
+where under the hybrid configuration is not isolated here (see the correction above), so
+this shows that quantized weights are far more sensitive to the execution path, not which
+dequantization path is responsible.
 
 **It scales with coarseness.** Median divergence runs f16 0.014 -> Q8_0 0.081 -> Q2_K
 0.386, a 28x spread, and the tail grows faster than the median: Q2_K's p95 is 5.98 and
@@ -101,11 +126,11 @@ unlikely answers, where the log scale is steep: `ACTAAP_2010_7_17` choice 2 on Q
 from -167.65 to -146.55. But the medians above are computed over all 800 continuations
 per model, so the typical one moves too.
 
-**The effect on the gate is material.** acc_norm on Q4_K_M moved 0.015 between devices,
+**The effect on the gate is material.** acc_norm on Q4_K_M moved 0.015 between the two configurations,
 roughly a third of the configured minimum detectable effect of 0.05. Worse, the borderline
-validation case (`subtle-open-question`) came out at p = 0.0987 on CUDA and p = 0.4244 on
-CPU. Both PASS, but the strength of evidence differs by a factor of four from the device
-alone. A candidate scored on GPU against a baseline scored on CPU spends a large part of
+validation case (`subtle-open-question`) came out at p = 0.0987 fully offloaded and p = 0.4244 with
+0 layers offloaded. Both PASS, but the strength of evidence differs by a factor of four from the
+offload setting alone. A candidate and baseline scored under different offload settings spend a large part of
 the gate's detection budget before any real change is considered.
 
 That is the measured justification for the config fingerprint below.

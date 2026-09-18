@@ -64,8 +64,13 @@ class LlamaCppBackend:
         """Everything that can move the numbers without changing the model file
         or the item set. Hashed into the run record so the gate can refuse to
         compare runs produced differently. Measured on this machine: the same
-        3B Q4_K_M weights scored on CPU vs CUDA moved acc_norm by 0.015 and
-        changed 13 of 400 decisions, so this is not a theoretical concern."""
+        3B Q4_K_M weights with all layers offloaded vs 0 layers offloaded moved
+        acc_norm by 0.015 and changed 13 of 400 decisions.
+
+        gpu_build and cuda_visible_devices exist because n_gpu_layers=0 is not
+        "CPU": a CUDA build with a visible GPU still sends large matmuls to the
+        GPU. Without these two fields that hybrid run and a true CPU run write
+        identical configs while differing by up to 4.1 nats."""
         import llama_cpp
         return {"backend": "llamacpp",
                 "device": self.spec.device,
@@ -73,6 +78,8 @@ class LlamaCppBackend:
                 "n_ctx": self.spec.n_ctx,
                 "n_batch": self.spec.n_batch,
                 "n_threads": self.spec.n_threads,
+                "gpu_build": bool(llama_cpp.llama_supports_gpu_offload()),
+                "cuda_visible_devices": os.environ.get("CUDA_VISIBLE_DEVICES"),
                 "lib": f"llama_cpp {llama_cpp.__version__}"}
 
 class HFBackend:

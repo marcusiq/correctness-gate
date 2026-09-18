@@ -28,7 +28,7 @@ env:
 
 jobs:
   unit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -38,7 +38,7 @@ jobs:
         id: wheel
         with:
           path: wheels
-          key: llama-cpp-${{ env.LLAMA_CPP_VERSION }}-avx2-${{ runner.os }}-py312
+          key: llama-cpp-${{ env.LLAMA_CPP_VERSION }}-avx2-ubuntu-24.04-py312
       - if: steps.wheel.outputs.cache-hit != 'true'
         run: pip wheel --no-deps "llama-cpp-python==${LLAMA_CPP_VERSION}" -w wheels
       - run: pip install wheels/*.whl
@@ -46,7 +46,7 @@ jobs:
       - run: pytest -q
 
   model-gate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: unit
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
         id: wheel
         with:
           path: wheels
-          key: llama-cpp-${{ env.LLAMA_CPP_VERSION }}-avx2-${{ runner.os }}-py312
+          key: llama-cpp-${{ env.LLAMA_CPP_VERSION }}-avx2-ubuntu-24.04-py312
       - if: steps.wheel.outputs.cache-hit != 'true'
         run: pip wheel --no-deps "llama-cpp-python==${LLAMA_CPP_VERSION}" -w wheels
       - run: pip install wheels/*.whl
@@ -71,6 +71,8 @@ jobs:
           path: models
           key: gguf-${{ steps.model.outputs.name }}
       - run: python scripts/fetch_model.py --model "${{ steps.model.outputs.name }}"
+      - name: Record runner CPU
+        run: lscpu | grep -E 'Model name|Flags' | cut -c1-200
       - name: Score candidate
         run: cgate run --model "${{ steps.model.outputs.name }}" --out results/candidate.json
       # Uploaded even when the gate fails: a baseline is promoted from a
