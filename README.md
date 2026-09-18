@@ -6,7 +6,11 @@ threshold, reports every verdict with a confidence interval and the smallest
 drop it could have detected, and is itself tested against known-good and
 known-bad quantized models.
 
-<!-- TODO: screenshot of the FAIL comment on the Q2_K demo PR -->
+![The gate failing a pull request that swaps in a smaller model](docs/gate-fail.png)
+
+*The gate's comment on [a pull request that swaps the deployed model for a
+smaller one](https://github.com/marcusiq/correctness-gate/pull/3): 43 items
+broke against 19 fixed, a significant regression, and the merge is blocked.*
 
 ## The gate's own eval
 
@@ -254,7 +258,27 @@ python scripts/diff_runs.py results/local-cpu-avx2 results/runner-1
 cache (it compiles llama.cpp) and 27s warm; `model-gate` takes 8m38s,
 almost all of it scoring 200 items.
 
-<!-- TODO: links to the two demo PRs (Q8_0 expected PASS, Q2_K expected FAIL) -->
+### Three pull requests, three verdicts
+
+Each demo PR changes one line, the `under_test` model in
+`configs/models.yaml`. They stay open as a record of what the gate does.
+
+| PR | change | acc | acc_norm | verdict |
+|---|---|---|---|---|
+| [#1](https://github.com/marcusiq/correctness-gate/pull/1) | Qwen2.5-0.5B Q4_K_M to Q8_0 | +0.010 (p = 0.77) | -0.015 (p = 0.61) | PASS |
+| [#2](https://github.com/marcusiq/correctness-gate/pull/2) | Q4_K_M to Qwen's published Q2_K | -0.020 (p = 0.54) | -0.030 (p = 0.34) | PASS, underpowered |
+| [#3](https://github.com/marcusiq/correctness-gate/pull/3) | Qwen2.5-0.5B to SmolLM2-360M | **-0.120 (p = 0.003)** | -0.055 (p = 0.13) | **FAIL** |
+
+PR #2 was meant to be the failing case, on the assumption that a 2-bit
+0.5B model is badly degraded. It is not: Qwen's published Q2_K loses 2 to 3
+points. At 200 items the gate can only detect drops of 0.075 (acc) and
+0.081 (acc_norm), so it passes and says so, with the item count it would
+need (about 450 to 530). That is the correct answer. A real regression
+below the detection limit is reported as exactly that, not hidden and not
+promoted to a failure.
+
+PRs #1 and #3 match what the same models scored locally before the PRs
+were opened, to three decimal places.
 
 ## Quick start
 
@@ -270,10 +294,11 @@ cgate run --model qwen0.5b-q8   --limit 20 --out results/b.json
 cgate compare --baseline results/a.json --candidate results/b.json
 ```
 
-The two 20-item runs and the compare take about 30 seconds on 6 CPU
-cores. Expect a PASS that says it is badly underpowered: at n = 20 it can
-only detect drops of 0.25 (acc) and 0.14 (acc_norm). Drop `--limit` for the
-full 200 items.
+On a fresh clone (6 CPU cores) the whole sequence took 3.5 minutes: 2.5 to
+install, most of it compiling llama.cpp, and under a minute for everything
+after. Expect a PASS that says it is badly underpowered: at n = 20 it can
+only detect drops of roughly 0.15 or more. Drop `--limit` for the full 200
+items.
 
 ## Hardware
 
