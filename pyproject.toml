@@ -10,7 +10,9 @@ requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.26",
     "PyYAML>=6",
-    "llama-cpp-python>=0.3.34",
+    # Exact pin: the library version is part of every run record's config
+    # fingerprint, so a floating version would make CI refuse its own baseline.
+    "llama-cpp-python==0.3.35",
 ]
 
 [project.optional-dependencies]

@@ -7,12 +7,24 @@ on:
       - "correctness_gate/**"
       - "data/**"
       - "baselines/**"
+      - "pyproject.toml"
       - ".github/workflows/gate.yml"
   workflow_dispatch: {}
 
 permissions:
   contents: read
   pull-requests: write
+
+env:
+  LLAMA_CPP_VERSION: "0.3.35"
+  # PyPI ships llama-cpp-python as source only, so the runner compiles it.
+  # GGML_NATIVE=OFF plus an explicit instruction set makes the build identical
+  # on every runner CPU: without it, a runner with AVX-512 and one without
+  # would select different quantized kernels, and the cached wheel could hit
+  # an illegal instruction on a runner older than the one that built it.
+  CMAKE_ARGS: >-
+    -DGGML_NATIVE=OFF -DGGML_AVX=ON -DGGML_AVX2=ON -DGGML_FMA=ON
+    -DGGML_F16C=ON -DGGML_BMI2=ON -DGGML_CUDA=OFF
 
 jobs:
   unit:
@@ -22,6 +34,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/cache@v4
+        id: wheel
+        with:
+          path: wheels
+          key: llama-cpp-${{ env.LLAMA_CPP_VERSION }}-avx2-${{ runner.os }}-py312
+      - if: steps.wheel.outputs.cache-hit != 'true'
+        run: pip wheel --no-deps "llama-cpp-python==${LLAMA_CPP_VERSION}" -w wheels
+      - run: pip install wheels/*.whl
       - run: pip install -e ".[dev]"
       - run: pytest -q
 
@@ -33,6 +53,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/cache@v4
+        id: wheel
+        with:
+          path: wheels
+          key: llama-cpp-${{ env.LLAMA_CPP_VERSION }}-avx2-${{ runner.os }}-py312
+      - if: steps.wheel.outputs.cache-hit != 'true'
+        run: pip wheel --no-deps "llama-cpp-python==${LLAMA_CPP_VERSION}" -w wheels
+      - run: pip install wheels/*.whl
       - run: pip install -e .
       - name: Resolve model under test
         id: model
@@ -45,10 +73,19 @@ jobs:
       - run: python scripts/fetch_model.py --model "${{ steps.model.outputs.name }}"
       - name: Score candidate
         run: cgate run --model "${{ steps.model.outputs.name }}" --out results/candidate.json
+      # Uploaded even when the gate fails: a baseline is promoted from a
+      # runner-produced record, never from a local one (different CPU,
+      # different build), so this artifact is where baselines come from.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: candidate-${{ steps.model.outputs.name }}
+          path: results/candidate.json
+          if-no-files-found: ignore
       - name: Gate
         run: cgate compare --baseline baselines/qwen0.5b-q4km.json --candidate results/candidate.json --report report.md
       - name: Comment on PR
-        if: always() && github.event_name == 'pull_request'
+        if: always() && github.event_name == 'pull_request' && hashFiles('report.md') != ''
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file report.md || true
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file report.md
