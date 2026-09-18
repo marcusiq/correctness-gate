@@ -13,7 +13,7 @@ import yaml
 from correctness_gate.backends import make_backend
 from correctness_gate.config import load_gate, load_models
 from correctness_gate.gate import GateError, compare
-from correctness_gate.items import fingerprint, load_items
+from correctness_gate.items import fingerprint, hash_json, load_items
 from correctness_gate.mcq import evaluate
 
 
@@ -24,8 +24,10 @@ def run_model(name, specs, items, cache: Path) -> dict:
     print(f"scoring {name} ...")
     be = make_backend(specs[name])
     res = evaluate(be, items)
+    cfg_desc = be.describe()
     res |= {"model": name, "backend": specs[name].backend,
-            "fingerprint": fingerprint(items)}
+            "fingerprint": fingerprint(items),
+            "config": cfg_desc, "config_fingerprint": hash_json(cfg_desc)}
     out.write_text(json.dumps(res, indent=1))
     del be
     gc.collect()

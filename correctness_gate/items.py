@@ -27,6 +27,16 @@ def normalize_gold(labels: list[str], answer_key: str) -> int:
 def load_items(path: str | Path) -> list[Item]:
     raw = json.loads(Path(path).read_text())
     return [Item(**r) for r in raw]
-def fingerprint(items: list[Item]) -> str:
-    canon = json.dumps([asdict(i) for i in items], sort_keys=True, separators=(",",":"))
+def hash_json(obj) -> str:
+    """Stable 64-bit id for any JSON-able object.
+
+    Canonical form first: sorted keys and no whitespace, so two equal objects
+    always produce the same bytes and therefore the same id. Used for the item
+    set and for the execution config, which are the two things a comparison is
+    only valid within.
+    """
+    canon = json.dumps(obj, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canon.encode()).hexdigest()[:16]
+
+def fingerprint(items: list[Item]) -> str:
+    return hash_json([asdict(i) for i in items])

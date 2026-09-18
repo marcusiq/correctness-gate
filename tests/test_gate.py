@@ -4,12 +4,14 @@ from correctness_gate.config import GateConfig
 from correctness_gate.gate import GateError, compare
 
 
-def mk_run(correct, model="m", fingerprint="f"):
+def mk_run(correct, model="m", fingerprint="f", config_fingerprint="c"):
     return {
         "model": model,
         "fingerprint": fingerprint,
         "acc": sum(correct) / len(correct),
         "acc_norm": sum(correct) / len(correct),
+        "config": {"backend": "test", "device": "cpu"},
+        "config_fingerprint": config_fingerprint,
         "items": [{"qid": str(i), "correct": c, "correct_norm": c}
                   for i, c in enumerate(correct)],
     }
@@ -55,7 +57,8 @@ def test_small_run_reports_underpowered():
     assert any("underpowered" in x for x in v.reasons)
 
 
-def mk_run2(correct, correct_norm, model="m", fingerprint="f"):
+def mk_run2(correct, correct_norm, model="m", fingerprint="f",
+            config_fingerprint="c"):
     """A run whose two metrics disagree, which is the normal case on real data:
     43 of 200 items disagreed on the 0.5B reference run."""
     return {
@@ -63,6 +66,8 @@ def mk_run2(correct, correct_norm, model="m", fingerprint="f"):
         "fingerprint": fingerprint,
         "acc": sum(correct) / len(correct),
         "acc_norm": sum(correct_norm) / len(correct_norm),
+        "config": {"backend": "test", "device": "cpu"},
+        "config_fingerprint": config_fingerprint,
         "items": [{"qid": str(i), "correct": c, "correct_norm": cn}
                   for i, (c, cn) in enumerate(zip(correct, correct_norm))],
     }
@@ -107,3 +112,21 @@ def test_no_metrics_fails_closed():
     cfg = GateConfig(n_boot=500, metrics=[])
     with pytest.raises(GateError):
         compare(mk_run([True] * 10), mk_run([True] * 10), cfg)
+
+
+def test_missing_config_fingerprint_fails_closed():
+    """A legacy run record cannot say what produced it, so it cannot be gated."""
+    legacy = mk_run([True] * 10)
+    del legacy["config_fingerprint"]
+    with pytest.raises(GateError, match="config_fingerprint"):
+        compare(legacy, mk_run([True] * 10), CFG)
+
+
+def test_config_mismatch_fails_closed():
+    """CPU vs CUDA on the same weights moved acc_norm by 0.015 on this machine,
+    so a config change and a quality change are not separable."""
+    base = mk_run([True] * 10)
+    cand = mk_run([True] * 10, config_fingerprint="d")
+    cand["config"] = {"backend": "test", "device": "cuda"}
+    with pytest.raises(GateError, match="execution configs differ"):
+        compare(base, cand, CFG)

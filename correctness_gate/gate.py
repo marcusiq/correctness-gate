@@ -124,6 +124,24 @@ def compare(baseline: dict, candidate: dict, cfg: GateConfig) -> Verdict:
             f"item-set fingerprints differ ({baseline['fingerprint']} vs "
             f"{candidate['fingerprint']}); runs on different item sets are "
             "not comparable")
+    bcfg, ccfg = (baseline.get("config_fingerprint"),
+                  candidate.get("config_fingerprint"))
+    if bcfg is None or ccfg is None:
+        raise GateError(
+            "a run record has no config_fingerprint, so there is no way to "
+            "tell what produced it (device, threads, batch size, dtype). "
+            "Re-run it rather than comparing blind")
+    if bcfg != ccfg:
+        diff = {k: (baseline.get("config", {}).get(k),
+                    candidate.get("config", {}).get(k))
+                for k in set(baseline.get("config", {}))
+                | set(candidate.get("config", {}))
+                if baseline.get("config", {}).get(k)
+                != candidate.get("config", {}).get(k)}
+        raise GateError(
+            f"execution configs differ: {diff}. A quality change and a "
+            "configuration change are not separable from these two runs; "
+            "re-measure the baseline under the candidate's configuration")
     if not cfg.metrics:
         raise GateError("no metrics configured; a gate that tests nothing "
                         "cannot pass")

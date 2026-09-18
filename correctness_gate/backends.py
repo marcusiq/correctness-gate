@@ -60,6 +60,21 @@ class LlamaCppBackend:
         rows = scores[len(ctx) - 1 : len(whole) - 1]
         return Scored(token_ids=cont, rows=rows.copy())
 
+    def describe(self) -> dict:
+        """Everything that can move the numbers without changing the model file
+        or the item set. Hashed into the run record so the gate can refuse to
+        compare runs produced differently. Measured on this machine: the same
+        3B Q4_K_M weights scored on CPU vs CUDA moved acc_norm by 0.015 and
+        changed 13 of 400 decisions, so this is not a theoretical concern."""
+        import llama_cpp
+        return {"backend": "llamacpp",
+                "device": self.spec.device,
+                "n_gpu_layers": self.n_gpu_layers,
+                "n_ctx": self.spec.n_ctx,
+                "n_batch": self.spec.n_batch,
+                "n_threads": self.spec.n_threads,
+                "lib": f"llama_cpp {llama_cpp.__version__}"}
+
 class HFBackend:
     def __init__(self, spec: ModelSpec):
         import torch
@@ -86,6 +101,17 @@ class HFBackend:
             logits = self.model(ids).logits[0]  # (len(whole), vocab)
         rows = logits[len(ctx) - 1 : len(whole) - 1].float().cpu().numpy()
         return Scored(token_ids=list(cont), rows=rows)
+
+    def describe(self) -> dict:
+        """See LlamaCppBackend.describe. allow_tf32 is included because on
+        Ampere it silently changes float32 matmuls, which would move scores
+        with nothing visible in the config file."""
+        torch = self.torch
+        return {"backend": "hf",
+                "device": self.spec.device,
+                "dtype": self.spec.dtype,
+                "allow_tf32": bool(torch.backends.cuda.matmul.allow_tf32),
+                "lib": f"torch {torch.__version__}"}
 
 
 def make_backend(spec: ModelSpec):

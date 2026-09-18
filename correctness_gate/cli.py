@@ -52,16 +52,21 @@ def main(argv=None) -> int:
 def _run(a) -> int:
     from .backends import make_backend
     from .config import load_models
-    from .items import fingerprint, load_items
+    from .items import fingerprint, hash_json, load_items
     from .mcq import evaluate
 
     specs, _ = load_models(a.models)
     items = load_items(a.items)
     if a.limit:
         items = items[: a.limit]
-    res = evaluate(make_backend(specs[a.model]), items)
+    be = make_backend(specs[a.model])
+    res = evaluate(be, items)
+    # The execution config travels with the scores: a run record that cannot
+    # say what produced it cannot be compared against anything.
+    cfg_desc = be.describe()
     res |= {"model": a.model, "backend": specs[a.model].backend,
-            "fingerprint": fingerprint(items)}
+            "fingerprint": fingerprint(items),
+            "config": cfg_desc, "config_fingerprint": hash_json(cfg_desc)}
     out = Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(res, indent=1))
