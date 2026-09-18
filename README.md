@@ -191,25 +191,25 @@ Details and per-model tables in
 ## The config fingerprint
 
 Every run record carries the execution config that produced it (backend,
-device, GPU layers, context, batch size, threads, library version; dtype
-and TF32 for the HF backend) and a hash of it. The gate refuses to compare
-two records whose hashes differ. The first CI run against a baseline
-scored on the GPU fails with:
+device, GPU layers, context, batch size, threads, whether the llama.cpp
+build has GPU support, which GPUs the process could see, library version;
+dtype and TF32 for the HF backend) and a hash of it. The gate refuses to
+compare two records whose hashes differ. The first CI run against a
+baseline scored on the GPU failed with:
 
 ```
-execution configs differ: {'device': ('cuda', 'cpu'), 'n_gpu_layers': (-1, 0)}
+execution configs differ: {'gpu_build': (None, False), 'n_gpu_layers': (-1, 0), 'device': ('cuda', 'cpu')}
 ```
 
 That is the intended behavior. A quality change and a config change are
 not separable from two runs, so the gate does not guess.
 
-**Known gap.** The fingerprint does not yet record whether the llama.cpp
-build has GPU support, or whether a GPU was visible. A "0 layers
-offloaded" run on a CUDA build and a true CPU run produce identical
-records. On 10 items of the 3B Q4_K_M model their log-probabilities
-differ by up to 4.1 nats. CI is not affected (the runner build is
-CPU-only), but comparing a local CUDA-build record against a CI record
-would not be caught.
+The GPU-build and visibility fields were added after a measurement showed
+they were missing. A "0 layers offloaded" run on a CUDA build and a true
+CPU run used to write identical configs, yet on 10 items of the 3B Q4_K_M
+model their log-probabilities differ by up to 4.1 nats. Every earlier
+mislabeling in this project had the same shape: something that moves the
+numbers, absent from the record. The fix each time was to record it.
 
 ## In CI
 
@@ -228,9 +228,33 @@ configs, the package, the data, the baseline, or dependencies:
 The baseline is promoted from a runner-produced record, never a local one.
 Baseline promotion is always a manual commit.
 
-<!-- TODO after the runs: cold vs warm job times; runner-vs-runner and
-local-vs-runner flip counts (scripts/diff_runs.py); links to the two demo
-PRs (Q8_0 expected PASS, Q2_K expected FAIL). -->
+### CPU scoring is portable across machines
+
+The same 200-item run of Qwen2.5-0.5B Q4_K_M on three different CPUs,
+all using the fixed-instruction-set build:
+
+| machine | CPU | acc | acc_norm | vs the others |
+|---|---|---|---|---|
+| local | Intel Core i5-11600KF (AVX-512 capable) | 0.615 | 0.560 | |
+| GitHub runner 1 | AMD EPYC 9V74 (Zen 4, AVX-512 capable) | 0.615 | 0.560 | bit-identical |
+| GitHub runner 2 | AMD EPYC 7763 (Zen 3, no AVX-512) | 0.615 | 0.560 | bit-identical |
+
+All 800 scored continuations match exactly, 0 of 200 decisions change,
+and the runner-2 gate against the runner-1 baseline passes with a delta of
++0.000 and a confidence interval of [0.000, 0.000]. Two CPU vendors, and
+machines with and without AVX-512, produce the same numbers because the
+build does not let each machine pick its own kernels.
+
+```bash
+python scripts/diff_runs.py results/runner-1 results/runner-2
+python scripts/diff_runs.py results/local-cpu-avx2 results/runner-1
+```
+
+**Job times** (private-repo runners, 2 vCPUs): `unit` takes 7m03s on a cold
+cache (it compiles llama.cpp) and 27s warm; `model-gate` takes 8m38s,
+almost all of it scoring 200 items.
+
+<!-- TODO: links to the two demo PRs (Q8_0 expected PASS, Q2_K expected FAIL) -->
 
 ## Quick start
 
@@ -281,7 +305,6 @@ CI runs on GitHub-hosted `ubuntu-24.04` runners.
 - **Bonferroni is conservative.** Splitting alpha across metrics keeps the
   family-wise false-positive rate at 0.05 and costs power. The noise rows
   above show exactly what it trades.
-- **The config fingerprint gap** described above.
 
 ## Layout
 

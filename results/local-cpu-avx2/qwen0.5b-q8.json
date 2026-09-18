@@ -2814,7 +2814,9 @@
   "n_ctx": 640,
   "n_batch": 512,
   "n_threads": 4,
+  "gpu_build": false,
+  "cuda_visible_devices": null,
   "lib": "llama_cpp 0.3.35"
  },
- "config_fingerprint": "17798a2610ccc91b"
+ "config_fingerprint": "3ae00b976b6b51ff"
 }
